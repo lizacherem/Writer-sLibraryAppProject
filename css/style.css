@@ -1,18 +1,18 @@
 body {
     font-family: 'Times New Roman', Times, serif; 
     color: #333;
-    background-color: #f8f5f0; /* A parchment-like background color */
+    background-color: #f8f5f0; 
     line-height: 1.75;
     font-size: 17px;
 }
 
 a {
     text-decoration: none;
-    color: #5D4037; /* A vintage ink-like color for links */
+    color: #5D4037; 
 }
 
 a:hover {
-    color: #3E2723; /* A darker brown for hover effects */
+    color: #3E2723; 
 }
 
 .starter-template {
@@ -40,11 +40,11 @@ a:hover {
 }
 
 .container-fluid h2 {
-    font-size: 2em; /* Slightly smaller than the h1 for a hierarchical look */
-    color: #5D4037; /* Same color as the h1 for consistency */
+    font-size: 2em; 
+    color: #5D4037; 
     margin: 0;
-    padding: 10px 0; /* Slightly less padding than the h1 for proportion */
-    text-align: center; /* Aligns the text to the center */
+    padding: 10px 0; 
+    text-align: center; 
     font-weight: normal; 
 }
 
@@ -124,63 +124,63 @@ a:hover {
 }
 
 .digital-edition-contents, .useful-links {
-    background-color: #ffffff; /* White background for consistency */
-    padding: 20px; /* Padding for spacing */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Soft shadow for depth */
-    border-radius: 5px; /* Slightly rounded corners */
-    margin-top: 20px; /* Space between sections */
+    background-color: #ffffff; 
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    border-radius: 5px; 
+    margin-top: 20px; 
 }
 
 .navigation-container .btn-link, .useful-links .btn-link {
-    padding: 8px 20px; /* Add padding around the text */
-    text-decoration: none; /* Removes underline from links */
-    color: #fff; /* Button text color */
-    background-color: #5D4037; /* Dark brown background color for a vintage look */
-    border: none; /* No border */
-    border-radius: 5px; /* Slightly rounded corners for the buttons */
-    font-family: 'Times New Roman', Times, serif; /* Font more appropriate for a manuscript */
-    font-size: 16px; /* Adjust font size as needed */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    padding: 8px 20px; 
+    text-decoration: none; 
+    color: #fff; 
+    background-color: #5D4037; 
+    border: none; 
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
 
 }
 
 .btn-link:hover {
-    background-color: #3E2723; /* Darken button on hover for interactive effect */
-    color: #dcdcdc; /* Lighten text color slightly on hover */
-    text-decoration: none; /* Ensures that no underline appears on hover */
+    background-color: #3E2723; 
+    color: #dcdcdc; 
+    text-decoration: none; 
 }
 
 .navigation-container .form-control:hover {
-    background-color: #3E2723; /* Darken background on hover */
-    color: #dcdcdc; /* Lighten text color slightly on hover */
+    background-color: #3E2723;
+    color: #dcdcdc; 
 }
 
 .navigation-container {
-    display: flex; /* Enables flexbox layout */
-    align-items: center; /* Vertically centers the items */
-    justify-content: flex-start; /* Horizontally centers the items */
-    gap: 10px; /* Adds space between elements */
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    gap: 10px; /* needed to add space between elements */
 }
 
 .navigation-container .form-control {
-    font-family: 'Times New Roman', Times, serif; /* Match font */
-    font-size: 16px; /* Match font size */
-    color: #fff; /* Text color */
-    background-color: #5D4037; /* Background color */
-    border: none; /* No border */
-    border-radius: 5px; /* Slightly rounded corners */
-    padding: 10px; /* Padding */
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: 16px; 
+    color: #fff; 
+    background-color: #5D4037; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px; 
     margin-right: 10px;
-    -webkit-appearance: none; /* Removes default styling for select on WebKit browsers */
-    -moz-appearance: none; /* Removes default styling for select on Mozilla browsers */
-    appearance: none; /* Removes default styling for select */
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
     height: auto;
 }
 
 
 
 .navigation-container .form-group {
-    margin-bottom: 0; /* Removes the default bottom margin */
+    margin-bottom: 0; 
 }
 
 
@@ -209,11 +209,11 @@ a:hover {
     }
     
     header h1 {
-        font-size: 2em; /* Slightly smaller font size on small screens */
+        font-size: 2em; 
     }
     
     .col, .indentedLine, .chapterTitle, .pageNumber {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%;
     }
 }
 
@@ -221,8 +221,8 @@ a:hover {
 /* Style of the pages */
 
 p, h1, h2, h3, h4, ul, li {
-    font-family: 'Times New Roman', Times, serif; /* Consistent font */
-    color: #333; /* Consistent text color */
+    font-family: 'Times New Roman', Times, serif; 
+    color: #333; 
 }
 
 p {
@@ -300,10 +300,10 @@ p {
 
 
 .col {
-  background-color: #ffffff; /* Light background for each column */
+  background-color: #ffffff; 
   padding: 20px;
   border-radius: 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
   margin-left: 0;
   margin-right: 0;
   box-shadow: none;
@@ -311,7 +311,7 @@ p {
 
 
 h4 {
-    color: #5D4037; /* a slightly brighter color for headings */
+    color: #5D4037; 
     margin-bottom: 15px;
 }
 
@@ -320,7 +320,7 @@ h4 {
 }
 
 ul {
-    list-style-type: none; /* removes default bullet points */
+    list-style-type: none; 
     padding-left: 0;
 }
 
@@ -332,7 +332,7 @@ li {
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black; /* indicates that it's hoverable */
+    border-bottom: 1px dotted black; 
 }
 
 .tooltip .tooltiptext {

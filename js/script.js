@@ -98,25 +98,30 @@ function documentLoader() {
   statsLoader();
   // Event listener for sel1 change
   
-function selectHand(event) {
-    var textsByMary = document.querySelectorAll('.\\#MWS');
-    var textsByPercy = document.querySelectorAll('.\\#PBS');
+    function selectHand(event) {
+    var visibleMary = document.getElementsByClassName('#MWS');
+    var visiblePercy = document.getElementsByClassName('#PBS');
 
-    // Reset styles for all texts
-    [textsByMary, textsByPercy].forEach(group => {
-        group.forEach(el => el.style.backgroundColor = '');
-    });
+    // Convert the HTMLCollection to an array for forEach compatibility
+    var maryArray = Array.from(visibleMary);
+    var percyArray = Array.from(visiblePercy);
 
-    if (event.target.value === 'both') {
-        // No specific styling required for both hands
-    } else if (event.target.value === 'Mary') {
-        textsByMary.forEach(el => {
-            el.style.backgroundColor = 'lightblue'; // Highlight Mary's text
-            // Remove highlighting from any nested Percy elements
-            el.querySelectorAll('.\\#PBS').forEach(nestedEl => nestedEl.style.backgroundColor = '');
-        });
-    } else if (event.target.value === 'Percy') {
-        textsByPercy.forEach(el => el.style.backgroundColor = 'lightblue'); // Highlight Percy's text
+    // Function to reset styles for all elements
+    function resetStyles() {
+        maryArray.forEach(el => el.style.backgroundColor = '');
+        percyArray.forEach(el => el.style.backgroundColor = '');
+    }
+
+    resetStyles(); 
+
+    if (event.target.value == 'both') {
+        
+    } else if (event.target.value == 'Mary') {
+        maryArray.forEach(el => el.style.backgroundColor = 'lightblue'); // Highlight Mary's text
+        percyArray.forEach(el => el.style.backgroundColor = '#f8f5f0'); // Percy's text in black
+    } else if (event.target.value == 'Percy') {
+        percyArray.forEach(el => el.style.backgroundColor = 'lightblue'); // Highlight Percy's text
+        maryArray.forEach(el => el.style.backgroundColor = '#f8f5f0'); // Mary's text in black
     }
 }
 
@@ -124,13 +129,15 @@ function selectHand(event) {
 document.getElementById('sel-hand').addEventListener('change', selectHand);
 
 
+
+
+
 // write another function that will toggle the display of the deletions by clicking on a button
 
 function toggleDeletions() {
-  // Select all elements marked as deletions
+  
   var deletions = document.querySelectorAll('del, .deletedText, .overwrittenText');
 
-  // Toggle the display property of each deletion element
   deletions.forEach(function(deletion) {
     if (deletion.style.display === 'none') {
       deletion.style.display = 'inline';
@@ -146,7 +153,7 @@ document.getElementById('toggleDeletionsButton').addEventListener('click', toggl
 
  // EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)
  
- var isReadersViewActive = false; // Flag to track the state of the reader's view
+var isReadersViewActive = false; 
 
 var isReadersViewActive = false;
 
@@ -156,30 +163,27 @@ function toggleReadersView() {
     console.log('Toggle Reader\'s View:', isReadersViewActive);
 
     if (!isReadersViewActive) {
-        // Switch to Reader's View
+        
         deletions.forEach(function(del) {
             del.style.display = 'none';
         });
         additions.forEach(function(add) {
             add.style.display = 'inline';
             add.style.verticalAlign = 'baseline';
-            add.style.position = 'static'; // Reset position if it's styled differently
-            // Additional styling adjustments can be made here
+            add.style.position = 'static'; 
         });
         isReadersViewActive = true;
     } else {
-        // Switch back to Original View
+        
         deletions.forEach(function(del) {
-            del.style.display = ''; // Resets to default
+            del.style.display = ''; 
         });
         additions.forEach(function(add) {
-            add.style.display = ''; // Resets to default
-            add.style.verticalAlign = ''; // Resets to default
-            add.style.position = ''; // Resets to default
-            // Reset other styles if needed
+            add.style.display = ''; 
+            add.style.verticalAlign = ''; 
+            add.style.position = ''; 
+            
         });
         isReadersViewActive = false;
     }
 }
-
-
