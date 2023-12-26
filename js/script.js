@@ -117,11 +117,10 @@ function documentLoader() {
     if (event.target.value == 'both') {
         
     } else if (event.target.value == 'Mary') {
-        maryArray.forEach(el => el.style.backgroundColor = 'lightblue'); // Highlight Mary's text
-        percyArray.forEach(el => el.style.backgroundColor = '#f8f5f0'); // Percy's text in black
+        maryArray.forEach(el => el.style.backgroundColor = 'lightblue'); 
+        percyArray.forEach(el => el.style.backgroundColor = '#f8f5f0');
     } else if (event.target.value == 'Percy') {
-        percyArray.forEach(el => el.style.backgroundColor = 'lightblue'); // Highlight Percy's text
-        maryArray.forEach(el => el.style.backgroundColor = '#f8f5f0'); // Mary's text in black
+        percyArray.forEach(el => el.style.backgroundColor = 'lightblue'); 
     }
 }
 
