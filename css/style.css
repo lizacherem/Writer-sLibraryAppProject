@@ -1,0 +1,352 @@
+body {
+    font-family: 'Times New Roman', Times, serif; 
+    color: #333;
+    background-color: #f8f5f0; /* A parchment-like background color */
+    line-height: 1.75;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+    color: #5D4037; /* A vintage ink-like color for links */
+}
+
+a:hover {
+    color: #3E2723; /* A darker brown for hover effects */
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.container-fluid header {
+    text-align: center; 
+    margin-bottom: 40px; 
+}
+
+.container-fluid header h1 {
+    font-size: 2.5em; 
+    color: #5D4037; 
+    margin: 0;
+    padding: 20px 0; 
+}
+
+.container-fluid h1 {
+    font-size: 2.5em; 
+    color: #5D4037; 
+    margin: 0;
+    text-align: center; 
+}
+
+.container-fluid h2 {
+    font-size: 2em; /* Slightly smaller than the h1 for a hierarchical look */
+    color: #5D4037; /* Same color as the h1 for consistency */
+    margin: 0;
+    padding: 10px 0; /* Slightly less padding than the h1 for proportion */
+    text-align: center; /* Aligns the text to the center */
+    font-weight: normal; 
+}
+
+
+.img-left {
+    flex-shrink: 0; 
+    width: 640px; 
+    height: auto;
+}
+
+.project-description {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #ffffff; 
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    border-radius: 5px;
+}
+
+.right-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-content {
+    flex-grow: 1;
+    flex-basis: 50%; 
+}
+
+
+.columns-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+.column {
+    display: block; 
+    width: 50%; 
+    box-sizing: border-box; 
+    padding: 0 10px;
+}
+
+.column ul {
+    list-style-type: none;
+    padding-left: 0; 
+    margin-top: 0; 
+}
+
+.column li {
+    margin-bottom: 10px; 
+    color: #333;
+}
+
+
+.container-fluid {
+    padding: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.useful-links {
+    flex-basis: 30%;
+    flex-wrap: wrap;
+    gap: 30px; 
+    justify-content: flex-start;
+    margin-bottom: 10px; 
+    display: inline-block;
+    
+}
+
+.digital-edition-contents, .useful-links {
+    background-color: #ffffff; /* White background for consistency */
+    padding: 20px; /* Padding for spacing */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    border-radius: 5px; /* Slightly rounded corners */
+    margin-top: 20px; /* Space between sections */
+}
+
+.navigation-container .btn-link, .useful-links .btn-link {
+    padding: 8px 20px; /* Add padding around the text */
+    text-decoration: none; /* Removes underline from links */
+    color: #fff; /* Button text color */
+    background-color: #5D4037; /* Dark brown background color for a vintage look */
+    border: none; /* No border */
+    border-radius: 5px; /* Slightly rounded corners for the buttons */
+    font-family: 'Times New Roman', Times, serif; /* Font more appropriate for a manuscript */
+    font-size: 16px; /* Adjust font size as needed */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+
+}
+
+.btn-link:hover {
+    background-color: #3E2723; /* Darken button on hover for interactive effect */
+    color: #dcdcdc; /* Lighten text color slightly on hover */
+    text-decoration: none; /* Ensures that no underline appears on hover */
+}
+
+.navigation-container .form-control:hover {
+    background-color: #3E2723; /* Darken background on hover */
+    color: #dcdcdc; /* Lighten text color slightly on hover */
+}
+
+.navigation-container {
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers the items */
+    justify-content: flex-start; /* Horizontally centers the items */
+    gap: 10px; /* Adds space between elements */
+}
+
+.navigation-container .form-control {
+    font-family: 'Times New Roman', Times, serif; /* Match font */
+    font-size: 16px; /* Match font size */
+    color: #fff; /* Text color */
+    background-color: #5D4037; /* Background color */
+    border: none; /* No border */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 10px; /* Padding */
+    margin-right: 10px;
+    -webkit-appearance: none; /* Removes default styling for select on WebKit browsers */
+    -moz-appearance: none; /* Removes default styling for select on Mozilla browsers */
+    appearance: none; /* Removes default styling for select */
+    height: auto;
+}
+
+
+
+.navigation-container .form-group {
+    margin-bottom: 0; /* Removes the default bottom margin */
+}
+
+
+.project-description h2, .digital-edition-contents h2, .useful-links h2 {
+    font-size: 1.5em;
+    color: #5D4037;
+}
+
+
+@media (max-width: 768px) {
+    .project-description {
+        flex-direction: column;
+    }
+
+    .img-left, .right-content {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .columns-container {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+    }
+    
+    header h1 {
+        font-size: 2em; /* Slightly smaller font size on small screens */
+    }
+    
+    .col, .indentedLine, .chapterTitle, .pageNumber {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+/* Style of the pages */
+
+p, h1, h2, h3, h4, ul, li {
+    font-family: 'Times New Roman', Times, serif; /* Consistent font */
+    color: #333; /* Consistent text color */
+}
+
+p {
+    text-indent: 10px;
+    line-height: 1.75;
+}
+
+
+.row {
+    width: 100%;
+    margin-left: 0;
+}
+
+
+.MWS {
+    color:#007bff !important;
+    
+}
+
+
+.overwrittenText, .overwritten {
+    font-style: italic;
+}
+
+
+
+.indentedLine {
+    text-indent: 40px; 
+    margin-bottom: 5px;
+    line-height: 0.2;
+}
+
+.nextParagraph {
+    margin-top: 0px; 
+}
+
+.marginAdd {
+    display: none;
+}
+
+.mirador-canvas-nav {
+    display: none !important;
+}
+
+.supraAdd {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.infraAdd {
+    vertical-align: sub; 
+    font-size: smaller;  
+}
+
+
+.chapterTitle {
+  text-align: center; 
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.pageNumber {
+  position: relative;
+  float: right;
+  border: 1px solid black;
+  border-radius: 50%;  
+  padding: 0.5em; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em; 
+  height: 2em; 
+  font-size: 1em; 
+  line-height: 2em; 
+}
+
+
+.col {
+  background-color: #ffffff; /* Light background for each column */
+  padding: 20px;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+  margin-left: 0;
+  margin-right: 0;
+  box-shadow: none;
+}
+
+
+h4 {
+    color: #5D4037; /* a slightly brighter color for headings */
+    margin-bottom: 15px;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+ul {
+    list-style-type: none; /* removes default bullet points */
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Interactive Elements - Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* indicates that it's hoverable */
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

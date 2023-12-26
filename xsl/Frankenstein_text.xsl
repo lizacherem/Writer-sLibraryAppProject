@@ -7,6 +7,20 @@
     
     <!-- <xsl:output method="xml" omit-xml-declaration="yes" indent="yes" /> -->
     <xsl:template match="tei:teiHeader"/>
+    
+    
+    <xsl:template match="tei:head">
+        <div class="chapterTitle">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="tei:metamark[@function='pagenumber']">
+        <span class="pageNumber">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
 
     <xsl:template match="tei:body">
         <div class="row">
@@ -25,7 +39,9 @@
                             <xsl:attribute name="class">
                                 <xsl:value-of select="attribute::hand" />
                             </xsl:attribute>
-                        <xsl:value-of select="."/><br/>
+                            <xsl:apply-templates/>
+                        <br/>
+                            
                         </span>
                     </xsl:otherwise>
                 </xsl:choose>
@@ -46,7 +62,19 @@
     <xsl:template match="tei:p">
         <p><xsl:apply-templates/></p>
     </xsl:template>
+    
 
+    <xsl:template match="tei:lb">
+        <br/>
+    </xsl:template>
+    
+    <xsl:template match="tei:hi[@rend = 'sup']">
+        <sup><xsl:apply-templates/></sup>
+    </xsl:template>
+    
+    <xsl:template match="tei:hi[@rend = 'u']">
+        <u><xsl:apply-templates/></u>
+    </xsl:template>
   
     <xsl:template match="tei:add[@place = 'marginleft']">
         <span class="marginAdd">
@@ -63,15 +91,72 @@
         </del>
     </xsl:template>
     
+    <xsl:template match="tei:add">
+        <add>
+            <xsl:attribute name="class">
+                <xsl:value-of select="@hand"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </add>
+    </xsl:template>
+    
     <!-- all the supralinear additions are given in a span with the class supraAdd, make sure to put this class in superscript in the CSS file, -->
+    
     <xsl:template match="tei:add[@place = 'supralinear']">
         <span class="supraAdd">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
+    <xsl:template match="tei:add[@place='supralinear']">
+        <span>
+            <xsl:attribute name="class">
+                <xsl:value-of select="concat('supraAdd ', @hand)"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
     
     <!-- add additional templates below, for example to transform the tei:lb in <br/> empty elements, tei:hi[@rend = 'sup'] in <sup> elements, the underlined text, additions with the attribute "overwritten" etc. -->
+    
+    <xsl:template match="tei:add[@place='overwritten']">
+        <span class="overwritten">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    
+    <xsl:template match="tei:add[@place='infralinear']">
+        <span class="infraAdd">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="del[@type='crossedOut']">
+        <span class="deletedText">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="del[@type='overwritten']">
+        <span class="overwrittenText">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    
+    <xsl:template match="tei:lg">
+        <div class="indentedPoem">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="tei:l">
+        <p class="indentedLine">
+            <xsl:apply-templates/>
+        </p>
+    </xsl:template>
+    
 
     
 </xsl:stylesheet>
