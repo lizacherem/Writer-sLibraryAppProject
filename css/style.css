@@ -51,7 +51,7 @@ a:hover {
 
 .img-left {
     flex-shrink: 0; 
-    width: 640px; 
+    width: 645px; 
     height: auto;
 }
 
@@ -328,7 +328,7 @@ li {
     margin-bottom: 10px;
 }
 
-/* Interactive Elements - Tooltips */
+
 .tooltip {
     position: relative;
     display: inline-block;

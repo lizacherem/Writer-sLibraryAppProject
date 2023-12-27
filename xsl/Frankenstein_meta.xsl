@@ -17,7 +17,7 @@
                              <h4>Statistics about this page</h4>
                              <ul>
                                  <li>Total number of modifications: 
-                                    <xsl:value-of select="count(//tei:del|//tei:add)" /> <!-- Counts all the add and del elements, and puts it in a list item -->
+                                    <xsl:value-of select="count(//tei:del|//tei:add)" /> 
                                  </li>
                                  <li>Total number of additions: 
                                     <xsl:value-of select="count(//tei:add)" />
@@ -49,7 +49,7 @@
     
     <xsl:template match="tei:licence">
         <div class="metadata-section">
-            <p class="italic-text"><xsl:value-of select="tei:p"/></p> <!-- Adjust this based on the structure of your licence element -->
+            <p class="italic-text"><xsl:value-of select="tei:p"/></p> 
         </div>
     </xsl:template>
 
